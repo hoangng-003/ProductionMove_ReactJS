@@ -38,16 +38,23 @@ import SignInCentered from "views/auth/signIn";
 
 const routes = [
   {
-    name: "Main Dashboard",
+    name: "Sign In",
+    layout: "/auth",
+    path: "/sign-in",
+    icon: <Icon as={MdLock} width='20px' height='20px' color='inherit' />,
+    component: SignInCentered,
+  },
+  {
+    name: "Product Portfolio",
     layout: "/admin",
     path: "/default",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: MainDashboard,
   },
   {
-    name: "NFT Marketplace",
+    name: "Account Management",
     layout: "/admin",
-    path: "/nft-marketplace",
+    path: "/account",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
@@ -60,37 +67,23 @@ const routes = [
     secondary: true,
   },
   {
-    name: "Data Tables",
+    name: "Product Tracking",
     layout: "/admin",
     icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path: "/data-tables",
+    path: "/tracking",
     component: DataTables,
   },
   {
-    name: "Profile",
-    layout: "/admin",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: Profile,
-  },
-  {
-    name: "Sign In",
-    layout: "/auth",
-    path: "/sign-in",
-    icon: <Icon as={MdLock} width='20px' height='20px' color='inherit' />,
-    component: SignInCentered,
-  },
-  {
-    name: "Main Dashboard 2",
+    name: "Quantity In Stock",
     layout: "/factory",
     path: "/default",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: MainDashboard2,
   },
   {
-    name: "NFT Marketplace 2",
+    name: "Exported Product",
     layout: "/factory",
-    path: "/nft-marketplace",
+    path: "/exported",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
@@ -103,30 +96,23 @@ const routes = [
     secondary: true,
   },
   {
-    name: "Data Tables 2",
+    name: "Defective Product",
     layout: "/factory",
     icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path: "/data-tables",
+    path: "/defective",
     component: DataTables2,
   },
   {
-    name: "Profile 2",
-    layout: "/factory",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: Profile2,
-  },
-  {
-    name: "Main Dashboard 3",
+    name: "Quantity In Stock",
     layout: "/dealer",
     path: "/default",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: MainDashboard3,
   },
   {
-    name: "NFT Marketplace 3",
+    name: "Products Sold",
     layout: "/dealer",
-    path: "/nft-marketplace",
+    path: "/sold",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
@@ -139,10 +125,10 @@ const routes = [
     secondary: true,
   },
   {
-    name: "Data Tables 3",
+    name: "Warranty Claim",
     layout: "/dealer",
     icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path: "/data-tables",
+    path: "/warranty",
     component: DataTables3,
   },
   {
@@ -153,16 +139,16 @@ const routes = [
     component: Profile3,
   },
   {
-    name: "Main Dashboard 4",
+    name: "Warranty Claim",
     layout: "/insurance",
     path: "/default",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: MainDashboard4,
   },
   {
-    name: "NFT Marketplace 4",
+    name: "Statistic",
     layout: "/insurance",
-    path: "/nft-marketplace",
+    path: "/statistic",
     icon: (
       <Icon
         as={MdOutlineShoppingCart}
@@ -173,20 +159,6 @@ const routes = [
     ),
     component: NFTMarketplace4,
     secondary: true,
-  },
-  {
-    name: "Data Tables 4",
-    layout: "/insurance",
-    icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path: "/data-tables",
-    component: DataTables4,
-  },
-  {
-    name: "Profile 4",
-    layout: "/insurance",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: Profile4,
   },
 ];
 

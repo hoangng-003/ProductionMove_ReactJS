@@ -34,6 +34,7 @@ import {
   Heading,
   Icon,
   Input,
+  Select,
   InputGroup,
   InputRightElement,
   Text,
@@ -74,12 +75,11 @@ function SignIn() {
         w='100%'
         mx={{ base: "auto", lg: "0px" }}
         me='auto'
-        h='100%'
-        alignItems='start'
+        // h='100%'
+        alignItems='center'
         justifyContent='center'
-        mb={{ base: "30px", md: "60px" }}
         px={{ base: "25px", md: "0px" }}
-        mt={{ base: "40px", md: "14vh" }}
+        mt={{ base: "40px", md: "220px" }}
         flexDirection='column'>
         <Box me='auto'>
           <Heading color={textColor} fontSize='36px' mb='10px'>
@@ -104,29 +104,7 @@ function SignIn() {
           mx={{ base: "auto", lg: "unset" }}
           me='auto'
           mb={{ base: "20px", md: "auto" }}>
-          <Button
-            fontSize='sm'
-            me='0px'
-            mb='26px'
-            py='15px'
-            h='50px'
-            borderRadius='16px'
-            bg={googleBg}
-            color={googleText}
-            fontWeight='500'
-            _hover={googleHover}
-            _active={googleActive}
-            _focus={googleActive}>
-            <Icon as={FcGoogle} w='20px' h='20px' me='10px' />
-            Sign in with Google
-          </Button>
-          <Flex align='center' mb='25px'>
-            <HSeparator />
-            <Text color='gray.400' mx='14px'>
-              or
-            </Text>
-            <HSeparator />
-          </Flex>
+
           <FormControl>
             <FormLabel
               display='flex'
@@ -175,6 +153,30 @@ function SignIn() {
                 />
               </InputRightElement>
             </InputGroup>
+            <FormLabel
+              display='flex'
+              ms='4px'
+              fontSize='sm'
+              fontWeight='500'
+              color={textColor}
+              mb='8px'>
+              Role<Text color={brandStars}>*</Text>
+            </FormLabel>
+
+            <Select placeholder='Select option'
+              isRequired={true}
+              variant='auth'
+              fontSize='sm'
+              ms={{ base: "0px", md: "0px" }}
+              type='email'
+              mb='24px'
+              fontWeight='500'
+              size='lg'
+            >
+              <option value='option1'>Option 1</option>
+              <option value='option2'>Option 2</option>
+              <option value='option3'>Option 3</option>
+            </Select>
             <Flex justifyContent='space-between' align='center' mb='24px'>
               <FormControl display='flex' alignItems='center'>
                 <Checkbox
@@ -219,7 +221,7 @@ function SignIn() {
             mt='0px'>
             <Text color={textColorDetails} fontWeight='400' fontSize='14px'>
               Not registered yet?
-              <NavLink to='/auth/sign-up'>
+              <NavLink to='/admin/default'>
                 <Text
                   color={textColorBrand}
                   as='span'
